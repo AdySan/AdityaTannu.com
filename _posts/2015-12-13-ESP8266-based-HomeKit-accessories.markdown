@@ -42,10 +42,11 @@ These instructions are specific to RaspberryPi. I didn't want to keep a computer
 
 - HAP-NodeJS requires some libraries, lets install them first
 
- ```bash
- sudo su </br>
- apt-get install git-core libnss-mdns libavahi-compat-libdnssd-dev -y
- ```
+```
+sudo su
+ 
+apt-get install git-core libnss-mdns libavahi-compat-libdnssd-dev -y
+```
 
 ### Node
 
@@ -53,7 +54,7 @@ You can get the link to the latest version of Node from [here](https://nodejs.or
 
  - Install node and some dependencies with the following commands
 
-   ```bash
+   ```
   wget https://nodejs.org/dist/v5.2.0/node-v5.2.0-linux-armv7l.tar.gz
 
   tar -xvf node-v5.2.0-linux-armv7l.tar.gz 
@@ -67,7 +68,7 @@ You can get the link to the latest version of Node from [here](https://nodejs.or
 
 ### Install HAPNodeJS
 
- ```bash
+ ```
 git clone https://github.com/KhaosT/HAP-NodeJS.git
 
 cd HAP-NodeJS/
@@ -105,11 +106,16 @@ If mosca runs without problems you should see something like this
 
 ![MOSCA]({{ site.url }}/images/mosca.png)
 
+## HomeKit App
+
+Unfortunately Apple doesn’t provide a stock app for HomeKit. For adding and pairing the HomeKit accessory, you’ll need something. The most polished app I’ve seen is [Matthias Hochgatterer’s](https://twitter.com/brutella) [Home](http://selfcoded.com/home/) app.
+
+If you can build your own app, try Apple’s official [HomeKit Catalog](https://developer.apple.com/library/ios/samplecode/HomeKitCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40015048) app. The maker of HAP-NoheJS, KhaosT, also has his [own version](https://github.com/KhaosT/HomeKit-Demo) of this app.
 
 
 ## ESP8266 Arduino
 
-You can find the source code for this part on GitHub at https://github.com/AdySan/HomeKitLight
+You can find the source code for this part on GitHub at (https://github.com/AdySan/HomeKitLight)
 
 ![Christmas Light]({{ site.url }}/images/christmas_light.png)
 
@@ -122,14 +128,16 @@ All this sketch does is to connect to WiFi, connect to the MQTT broker and subsc
 The sketch is based on an example in the [PubSubclient](https://github.com/Imroy/pubsubclient) MQTT library for ESP8266. 
 
 
-## HomeKit App
-
-Unfortunately Apple doesn’t provide a stock app for HomeKit. For adding and pairing the HomeKit accessory, you’ll need something. The most polished app I’ve seen is [Matthias Hochgatterer’s](https://twitter.com/brutella) [Home](http://selfcoded.com/home/) app.
-
-If you can build your own app, try Apple’s official [HomeKit Catalog](https://developer.apple.com/library/ios/samplecode/HomeKitCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40015048) app. The maker of HAP-NoheJS, KhaosT, also has his [own version](https://github.com/KhaosT/HomeKit-Demo) of this app.
-
 ## Further reading
 
-### MQTT Lens
+- [MQTT Lens](https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm?hl=en): This Chrome app is super useful in testing MQTT
 
-### 
+![MQTTLens]({{ site.url }}/images/MQTTLens.png)
+
+- [ESP8266 Power-strip](http://www.penninkhof.com/2015/05/linking-the-esp8266-a-raspberry-pi-through-mqtt/)
+
+- [Understanding MQTT better](http://thejackalofjavascript.com/getting-started-mqtt/)
+
+- [Screen](http://raspi.tv/2012/using-screen-with-raspberry-pi-to-avoid-leaving-ssh-sessions-open): Since we’re gonna have two things running on the RPi, HAP-NodeJS and the MQTT broker, we need a way to monitor both these processes separately. Right now I’m just using two separate terminal windows to SSH into the RPi. Screen would be a [better option](https://coderwall.com/p/quflrg/run-a-script-on-startup-in-a-detached-screen-on-a-raspberry-pi), once you have both these processes [running at boot up](http://www.stuffaboutcode.com/2012/06/raspberry-pi-run-program-at-start-up.html).
+
+

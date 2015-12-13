@@ -11,4 +11,4 @@ twitter_username: Ady
 github_username:  AdySan
 
 # Build settings
-markdown: kramdown
+markdown: redcarpet
