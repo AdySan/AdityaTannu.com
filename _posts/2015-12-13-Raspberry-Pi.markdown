@@ -130,7 +130,7 @@ More [here](https://www.raspberrypi.org/documentation/linux/usage/users.md)
 
 ### TFT Driver
 
-![TFT]({{ site.url }}/images/RPi_TFT.jpg =250x)
+![TFT]({{ site.url }}/images/RPi_TFT.jpg)
 
 I bought [this](http://www.aliexpress.com/item/Best-Price-Original-3-5-LCD-TFT-Touch-Screen-Display-for-Raspberry-Pi-2-Model/32443379727.html) super cheap $15 3.5" TFT touch screen. It is not really useful for the HomeKit project, but since I have it, might as well make it work!
 
