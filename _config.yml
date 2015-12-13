@@ -1,5 +1,6 @@
 # Site settings
-title: Ady
+name: Ady's Blog
+title: AdityaTannu.com
 email: name@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   This website is my attempt at documenting some of my projects. 
