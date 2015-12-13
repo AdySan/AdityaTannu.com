@@ -112,7 +112,12 @@ light.pincode = "031-45-154";
 
 ## ESP8266 Arduino
 
-You can find the source code for this part on GitHub at (https://github.com/AdySan/HomeKitLight)
+You can find the source code for this part on GitHub at [https://github.com/AdySan/HomeKitLight](https://github.com/AdySan/HomeKitLight)
+
+</br>
+<p align="center">
+<img src="{{ site.url }}/images/christmas_light.png" align="middle"alt="Christmas Light" height="600">
+</p>
 
 ![Christmas Light]({{ site.url }}/images/christmas_light.png)
 
@@ -127,7 +132,7 @@ The sketch is based on an example in the [PubSubclient](https://github.com/Imroy
 
 ### Make a new HomeKit accessory
 
-You can refer to my fork of HAP-NodeJS: (https://github.com/AdySan/HAP-NodeJS/blob/master/accessories/AdyLight_accessory.js)
+You can refer to my fork of HAP-NodeJS [here](https://github.com/AdySan/HAP-NodeJS/blob/master/accessories/AdyLight_accessory.js)
 
 - You just need to copy and existing accessory, in this case I copied `Light_accessory.js` to `AdyLight_accessory.js`
 
@@ -163,9 +168,10 @@ var client = mqtt.connect(options);
 
 ![mosca connected]({{ site.url }}/images/moscaconnected.png)
 
-![AdyLightOn]({{ site.url }}/images/AdyLightOn.PNG)
-
-![AdyLightOff]({{ site.url }}/images/AdyLightOff.PNG)
+</br>
+<p align="center">
+<img src="{{ site.url }}/images/AdyLightOn.PNG" align="middle"alt="Circuit" height="600"> <img src="{{ site.url }}/images/AdyLightOff.PNG" align="middle"alt="Circuit" height="600">
+</p>
 
 
 ## Further reading
