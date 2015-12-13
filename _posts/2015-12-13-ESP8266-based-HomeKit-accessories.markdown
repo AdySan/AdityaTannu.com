@@ -32,16 +32,18 @@ Here’s how it works: On boot up HAP-NodeJS server connects to a MQTT broker (w
 
 # Let’s make it work
 
+I’m assuming you have a working Raspberry Pi running Raspbian. If not go [here]({{ site.baseurl }}/blog/post/2015/12/13/Raspberry-Pi.html) and read how to get that working.
+
 ## [HAP-NodeJS](https://github.com/KhaosT/HAP-NodeJS)
 
 These instructions are specific to RaspberryPi. I didn't want to keep a computer running all the time, so I chose to install HAP-NodeJS on a RaspberryPi. You might wanna [install](https://github.com/KhaosT/HAP-NodeJS/wiki) HAP-NodeJS on a computer too just as a backup option.
 
-### Required libraries
+### Install required libraries
 
 - HAP-NodeJS requires some libraries, lets install them first
 
- ```Shell
- sudo su
+ ```bash
+ sudo su </br>
  apt-get install git-core libnss-mdns libavahi-compat-libdnssd-dev -y
  ```
 
@@ -51,46 +53,80 @@ You can get the link to the latest version of Node from [here](https://nodejs.or
 
  - Install node and some dependencies with the following commands
 
-   ```Shell
+   ```bash
   wget https://nodejs.org/dist/v5.2.0/node-v5.2.0-linux-armv7l.tar.gz
+
   tar -xvf node-v5.2.0-linux-armv7l.tar.gz 
+
   cd node-v5.2.0-linux-armv7l
+
   sudo cp -R * /usr/local
+
   npm install -g node-gyp
   ```
 
-## Install HAPNodeJS
+### Install HAPNodeJS
 
- ```Shell
+ ```bash
 git clone https://github.com/KhaosT/HAP-NodeJS.git
+
 cd HAP-NodeJS/
+
 npm install node-persist && npm install srp && npm install mdns --unsafe-perm
+
 npm install debug
+
 npm install ed25519 --unsafe-perm
+
 npm install curve25519 --unsafe-perm
+
 npm install mqtt --unsafe-perm
 
 ```
 
+Try running HAP-NodeJS `node BridgedCore.js`, should looks something like this
+
+![HAP-NodeJS]({{ site.url }}/images/HAP-NodeJS.png)
+
+
 ## MQTT Broker
 
-Install an MQTT server [Mosca](https://github.com/mcollina/mosca)
+Now that HAP-NodeJS is running, next thing we need is an MQTT broker so that we can send and recieve commands to and from the ESP8266 modules. 
+
+- Install an MQTT broker [Mosca](https://github.com/mcollina/mosca)
 
 `npm install mosca bunyan -g --unsafe-perm`
+
+- Run it
+
 `mosca -v | bunyan`
+
+If mosca runs without problems you should see something like this
+
+![MOSCA]({{ site.url }}/images/mosca.png)
+
 
 
 ## ESP8266 Arduino
 
-![Circuit]()
+You can find the source code for this part on GitHub at https://github.com/AdySan/HomeKitLight
+
+![Christmas Light]({{ site.url }}/images/christmas_light.png)
+
+For the ESP8266 side, I’m using the [latest git version](https://github.com/esp8266/Arduino) of the Arduino port of ESP8266. For the Arduino IDE, I’m specifically using [arduino-PR-4107-BUILD-421](https://github.com/arduino/Arduino/pull/4107) because it supports OTA firmware updates.
+
+All this sketch does is to connect to WiFi, connect to the MQTT broker and subscribe to the topic “AdyLight”. Once it receives a message on that topic, it parses it and toggles the relay GPIO accordingly.
 
 ### MQTT Library
-https://github.com/Imroy/pubsubclient
+
+The sketch is based on an example in the [PubSubclient](https://github.com/Imroy/pubsubclient) MQTT library for ESP8266. 
 
 
 ## HomeKit App
 
+Unfortunately Apple doesn’t provide a stock app for HomeKit. For adding and pairing the HomeKit accessory, you’ll need something. The most polished app I’ve seen is [Matthias Hochgatterer’s](https://twitter.com/brutella) [Home](http://selfcoded.com/home/) app.
 
+If you can build your own app, try Apple’s official [HomeKit Catalog](https://developer.apple.com/library/ios/samplecode/HomeKitCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40015048) app. The maker of HAP-NoheJS, KhaosT, also has his [own version](https://github.com/KhaosT/HomeKit-Demo) of this app.
 
 ## Further reading
 
