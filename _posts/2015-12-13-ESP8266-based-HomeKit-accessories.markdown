@@ -8,6 +8,10 @@ author: "Ady"
 
 # What is this about?
 
+<p align="center">
+<iframe align=“middle” width="420" height="315" src="http://www.youtube.com/embed/tGQj1bp5cOY" frameborder="0" allowfullscreen></iframe>
+</p>
+
 This video should give you an idea what we’re trying to achieve here. Of course HomeKit is a lot more powerful than just being able to switch a power outlet. 
 
 # Background
@@ -78,46 +82,6 @@ Try running HAP-NodeJS `node BridgedCore.js`, should looks something like this
 ![HAP-NodeJS]({{ site.url }}/images/HAP-NodeJS.png)
 
 
-### Make a new HomeKit accessory
-
-You can refer to my fork of HAP-NodeJS: https://github.com/AdySan/HAP-NodeJS/blob/master/accessories/AdyLight_accessory.js
-
-- You just need to copy and existing accessory, in this case I copied `Light_accessory.js` to `AdyLight_accessory.js`
-
-- Add connection to MQTT broker
-
-```javascript
-// MQTT Setup
-var mqtt = require('mqtt');
-var options = {
-  port: 1883,
-  host: '192.168.1.155',
-  clientId: 'AdyPi_MQTT_Publisher'
-};
-var client = mqtt.connect(options);
-```
-
-- Publish on topic “AdyLight”
-
-```javascript
-  setPowerOn: function(on) { 
-    console.log("Turning AdyLight %s!", on ? "on" : "off");
-
-    if (on) {
-			client.publish('AdyLight', 'on');
-   	} else {
-			client.publish('AdyLight','off');
-   };
-```
-
-- If everything works well, you should see something like this on HAP-NodeJS and mosca
-
-![HAPConnected]({{ site.url }}/images/HAPworking.png)
-
-![mosca connected]({{ site.url }}/images/moscaconnected.png)
-
-
-
 ## MQTT Broker
 
 Now that HAP-NodeJS is running, next thing we need is an MQTT broker so that we can send and recieve commands to and from the ESP8266 modules. 
@@ -159,6 +123,49 @@ All this sketch does is to connect to WiFi, connect to the MQTT broker and subsc
 ### MQTT Library
 
 The sketch is based on an example in the [PubSubclient](https://github.com/Imroy/pubsubclient) MQTT library for ESP8266. 
+
+
+### Make a new HomeKit accessory
+
+You can refer to my fork of HAP-NodeJS: (https://github.com/AdySan/HAP-NodeJS/blob/master/accessories/AdyLight_accessory.js)
+
+- You just need to copy and existing accessory, in this case I copied `Light_accessory.js` to `AdyLight_accessory.js`
+
+- Add connection to MQTT broker
+
+```javascript
+// MQTT Setup
+var mqtt = require('mqtt');
+var options = {
+  port: 1883,
+  host: '192.168.1.155',
+  clientId: 'AdyPi_MQTT_Publisher'
+};
+var client = mqtt.connect(options);
+```
+
+- Publish on topic “AdyLight”
+
+```javascript
+  setPowerOn: function(on) { 
+    console.log("Turning AdyLight %s!", on ? "on" : "off");
+
+    if (on) {
+			client.publish('AdyLight', 'on');
+   	} else {
+			client.publish('AdyLight','off');
+   };
+```
+
+- If everything works well, you should see something like this on HAP-NodeJS and mosca
+
+![HAPConnected]({{ site.url }}/images/HAPworking.png)
+
+![mosca connected]({{ site.url }}/images/moscaconnected.png)
+
+![AdyLightOn]({{ site.url }}/images/AdyLightOn.png)
+
+![AdyLightOff]({{ site.url }}/images/AdyLightOff.png)
 
 
 ## Further reading
