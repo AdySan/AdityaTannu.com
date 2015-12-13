@@ -6,9 +6,9 @@ categories: blog post
 author: "Ady"
 ---
 
-I bought my Raspberry Pi a few months ago, mostly out of curiosity. I set up [HAP-NodeJS](https://github.com/KhaosT/HAP-NodeJS) on it over a few weeks and got [this](https://www.instagram.com/p/6L7hbpEdT4/?taken-by=adysan) HomeKit project working on it. Recently I have been tinkering a lot with [ESP8266/Arduino](https://github.com/esp8266/Arduino) and decided to document some projects on this website. For the HomeKit project, I chose to use my Raspberry Pi as the HAP server. A few days ago I put in a new SD card into the Pi and set it up from scratch. Here are the steps I followed.
+I bought my Raspberry Pi a few months ago, mostly out of curiosity. I set up [HAP-NodeJS](https://github.com/KhaosT/HAP-NodeJS) on it over the next few weeks and got [this](https://www.instagram.com/p/6L7hbpEdT4/?taken-by=adysan) HomeKit project working. Recently I have been tinkering a lot with [ESP8266/Arduino](https://github.com/esp8266/Arduino) and decided to document some projects on this website. For the HomeKit project, I had chosen to use my Raspberry Pi as the HAP server. To help make a better guide for the project (and help me not to forget!), a few days ago I put in a new SD card into the Pi and set it up from scratch. Here are the steps I followed.
 
-Note: I am not a software developer, so I might have made some newbie mistakes and taken some shortcuts. I would appreciate if someone can point them out.
+*Note: I am not a software developer, so I might have made some newbie mistakes and taken some shortcuts. I would appreciate if someone can point them out.*
 
 ## NOOBS 
 
@@ -40,16 +40,16 @@ My Raspberry Pi [kit](http://www.amazon.com/gp/product/B00MV6TAJI?) came with an
 
  - The file should look as follows:
 
-	```
-	auto lo
-	iface lo inet loopback
-	iface eth0 inet dhcp
-	allow-hotplug wlan0
-	auto wlan0
-	iface wlan0 inet dhcp
-  	wpa-ssid "Your Network SSID"
-  	wpa-psk "Your Password"
-	```
+```
+auto lo
+iface lo inet loopback
+iface eth0 inet dhcp
+allow-hotplug wlan0
+auto wlan0
+iface wlan0 inet dhcp
+wpa-ssid "Your Network SSID"
+wpa-psk "Your Password"
+```
  	
  - Connect to the network
 
