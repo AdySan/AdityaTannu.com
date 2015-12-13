@@ -9,7 +9,7 @@ author: "Ady"
 # What is this about?
 
 <p align="center">
-<iframe align=“middle” width="420" height="315" src="http://www.youtube.com/embed/tGQj1bp5cOY" frameborder="0" allowfullscreen></iframe>
+<iframe align=“middle” width=“100%” src="http://www.youtube.com/embed/tGQj1bp5cOY" frameborder="0" allowfullscreen></iframe>
 </p>
 
 This video should give you an idea what we’re trying to achieve here. Of course HomeKit is a lot more powerful than just being able to switch a power outlet. 
@@ -118,8 +118,6 @@ You can find the source code for this part on GitHub at [https://github.com/AdyS
 <p align="center">
 <img src="{{ site.url }}/images/christmas_light.png" align="middle"alt="Christmas Light" height="600">
 </p>
-
-![Christmas Light]({{ site.url }}/images/christmas_light.png)
 
 For the ESP8266 side, I’m using the [latest git version](https://github.com/esp8266/Arduino) of the Arduino port of ESP8266. For the Arduino IDE, I’m specifically using [arduino-PR-4107-BUILD-421](https://github.com/arduino/Arduino/pull/4107) because it supports OTA firmware updates.
 
