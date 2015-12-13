@@ -163,9 +163,9 @@ var client = mqtt.connect(options);
 
 ![mosca connected]({{ site.url }}/images/moscaconnected.png)
 
-![AdyLightOn]({{ site.url }}/images/AdyLightOn.png)
+![AdyLightOn]({{ site.url }}/images/AdyLightOn.PNG)
 
-![AdyLightOff]({{ site.url }}/images/AdyLightOff.png)
+![AdyLightOff]({{ site.url }}/images/AdyLightOff.PNG)
 
 
 ## Further reading
