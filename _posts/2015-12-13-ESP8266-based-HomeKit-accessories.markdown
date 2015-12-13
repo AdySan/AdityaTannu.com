@@ -47,7 +47,7 @@ sudo su
 apt-get install git-core libnss-mdns libavahi-compat-libdnssd-dev -y
 ```
 
-### Node
+### Install Node
 
 You can get the link to the latest version of Node from [here](https://nodejs.org/en/download/). I meant to install Node v4.0 but installed v5.2 by mistake. It works anyway, at least so far.
 
@@ -78,6 +78,46 @@ Try running HAP-NodeJS `node BridgedCore.js`, should looks something like this
 ![HAP-NodeJS]({{ site.url }}/images/HAP-NodeJS.png)
 
 
+### Make a new HomeKit accessory
+
+You can refer to my fork of HAP-NodeJS: https://github.com/AdySan/HAP-NodeJS/blob/master/accessories/AdyLight_accessory.js
+
+- You just need to copy and existing accessory, in this case I copied `Light_accessory.js` to `AdyLight_accessory.js`
+
+- Add connection to MQTT broker
+
+```javascript
+// MQTT Setup
+var mqtt = require('mqtt');
+var options = {
+  port: 1883,
+  host: '192.168.1.155',
+  clientId: 'AdyPi_MQTT_Publisher'
+};
+var client = mqtt.connect(options);
+```
+
+- Publish on topic “AdyLight”
+
+```javascript
+  setPowerOn: function(on) { 
+    console.log("Turning AdyLight %s!", on ? "on" : "off");
+
+    if (on) {
+			client.publish('AdyLight', 'on');
+   	} else {
+			client.publish('AdyLight','off');
+   };
+```
+
+- If everything works well, you should see something like this on HAP-NodeJS and mosca
+
+![HAPConnected]({{ site.url }}/images/HAPworking.png)
+
+![mosca connected]({{ site.url }}/images/moscaconnected.png)
+
+
+
 ## MQTT Broker
 
 Now that HAP-NodeJS is running, next thing we need is an MQTT broker so that we can send and recieve commands to and from the ESP8266 modules. 
@@ -100,6 +140,11 @@ Unfortunately Apple doesn’t provide a stock app for HomeKit. For adding and pa
 
 If you can build your own app, try Apple’s official [HomeKit Catalog](https://developer.apple.com/library/ios/samplecode/HomeKitCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40015048) app. The maker of HAP-NoheJS, KhaosT, also has his [own version](https://github.com/KhaosT/HomeKit-Demo) of this app.
 
+For Pairing use this pin code from the HAP-NodeJS source
+
+```javascript
+light.pincode = "031-45-154";
+```
 
 ## ESP8266 Arduino
 
