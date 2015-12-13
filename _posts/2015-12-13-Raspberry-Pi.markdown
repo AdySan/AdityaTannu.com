@@ -6,35 +6,39 @@ categories: blog post
 author: "Ady"
 ---
 
-I bought my Raspberry Pi a few months ago, mostly out of curiosity. I set up [HAP-NodeJS](https://github.com/KhaosT/HAP-NodeJS) on it over a few weeks and got [this](https://www.instagram.com/p/6L7hbpEdT4/?taken-by=adysan) HomeKit project working on it. I recently have been tinkering a lot with [ESP8266/Arduino](https://github.com/esp8266/Arduino) and decided to document some projects on this website. For the HomeKit project, I chose to use my Raspberry Pi as the HAP server. A few days ago I put in a new SD card into the Pi and set it up from scratch. Here are the steps I followed.
+I bought my Raspberry Pi a few months ago, mostly out of curiosity. I set up [HAP-NodeJS](https://github.com/KhaosT/HAP-NodeJS) on it over a few weeks and got [this](https://www.instagram.com/p/6L7hbpEdT4/?taken-by=adysan) HomeKit project working on it. Recently I have been tinkering a lot with [ESP8266/Arduino](https://github.com/esp8266/Arduino) and decided to document some projects on this website. For the HomeKit project, I chose to use my Raspberry Pi as the HAP server. A few days ago I put in a new SD card into the Pi and set it up from scratch. Here are the steps I followed.
 
-Note: I am not a software developer, so I might have made some newbie mistakes here and taken some shortcuts. 
-
-# Raspberry Pi Installation
-
-This is how I set up my Raspberry Pi from scratch.
+Note: I am not a software developer, so I might have made some newbie mistakes and taken some shortcuts. I would appreciate if someone can point them out.
 
 ## NOOBS 
 
-- Download NOOBS here: https://www.raspberrypi.org/downloads/noobs/
+My Raspberry Pi came with an SD card pre-installed with NOOBS, but this time I am using a blank one. 
 
-- Instructions for NOOBS: https://www.raspberrypi.org/documentation/installation/installing-images/mac.md
+- Download NOOBS [here](https://www.raspberrypi.org/downloads/noobs/).
+
+- [Here](https://www.raspberrypi.org/documentation/installation/installing-images/mac.md) are the instructions for installing NOOBS and then Raspbian
 	 
-- In my case SD Card was mounted as: disk1s1
+ - In my case SD Card was mounted as `disk1s1` 
 	
-- Copied files from NOOBS Packacge to SD card
+ - Copied files from NOOBS Packacge to SD card
 
-- Insert SD card in to RPi, connect an HDMI display, mouse/KB and power up
+ -  Insert SD card in to RPi, connect an HDMI display, mouse/KB and power up
 	
-- Install Raspbian
+ - Install Raspbian
+
+- If you did everything correctly you should have a working installation of Raspbian. At this point, you have an HDMI display, keyboard and mouse connected, so it is rather clunky. First thing, lets get WiFi working.
 
 ## EDIMAX Wifi
 
-- Follow instructions here http://raspberrypihq.com/how-to-add-wifi-to-the-raspberry-pi/
-- First check if wifi module is detected: `dmesg | more`
-- Add you WiFi credentials
+My Raspberry Pi [kit](http://www.amazon.com/gp/product/B00MV6TAJI?) came with an EDIMAX wifi dongle. 
+
+- Follow instructions [here](http://raspberrypihq.com/how-to-add-wifi-to-the-raspberry-pi/)
+ - First check if wifi module is detected: `dmesg | more`
+ - Add your WiFi credentials
 
 	`sudo nano /etc/network/interfaces`
+
+ - The file should look as follows:
 
 	```
 	auto lo
@@ -46,11 +50,16 @@ This is how I set up my Raspberry Pi from scratch.
   	wpa-ssid "Your Network SSID"
   	wpa-psk "Your Password"
 	```
-- Connect to network
+ 	
+ - Connect to the network
 
 	`sudo service networking reload`
 
+ - Check if you have a valid IP address
+
 	`ifconfig`
+
+ - Should look something like this.
 
 	```
 	wlan0 Link encap:Ethernet HWaddr 80:1f:02:aa:12:58
@@ -62,99 +71,94 @@ This is how I set up my Raspberry Pi from scratch.
      RX bytes:32399 (31.6 KiB) TX bytes:13036 (12.7 KiB)
    	```
 
-## Enable SSH
- - Unless you want to always connect an HDMI display, keyboard and mouse, do this first.
+- Now that wifi is working, next step is to enable SSH, so you can get rid of the keyboard, mouse and HDMI display.
 
- - Enable SSH in this menu
+## Enable SSH
+
+SSH lets you remotely connect to your Raspberry Pi and get access to its terminal. VPN would be an option, but since most of your work is going to be in terminal, it is rather pointless (and sluggish).
+
+- Enable SSH in this menu
 
  `sudo raspi-config`
 
- - Try to SSH in from you computer. Passwors is `raspberry`
+- Try to SSH in from you computer. Defaults password is `raspberry`
 
  `ssh 192.168.1.155 -l pi`
 
+- Now that SSH is working, time for some customization.
 
-## Customize hostname
+## Customizations
 
+### Customize hostname
+
+The default hostname is `raspberrypi`, I wanted to rename it to something shorter like, say, `AdyPi`
+
+- Open the hostname file in nano
+ 
  `sudo nano /etc/hostname`
 
- - Rename to AdyPi
+- Rename to AdyPi, save and exit
+
+- Ensure that hostname gets applied on boot
 
  `sudo /etc/init.d/hostname.sh`
 
  `sudo reboot`
 
-## Change password
- - More at https://www.raspberrypi.org/documentation/linux/usage/users.md
- 
+- When you SSH in the next time, you prompt should look like `pi@AdyPi`
+
+### Change password
+
+More [here](https://www.raspberrypi.org/documentation/linux/usage/users.md)
+
+ - Basically just one command
+
  `passwd`
 
-## TFT Driver
-- First copy files to Raspberry `rsync -avz -e ssh Downloads/raspberry_35_inch_ts/LCD_show.tar.gz `pi@192.168.1.155:TFTDriver/`
-- Decompress files on Pi `tar -xzvf LCD_show.tar.gz`
-- `cd  LCD-show`
-- `sudo ./LCD35_v1`
+### TFT Driver
+
+![TFT](/_images/RPi_TFT.jpg)
+
+I bought [this](http://www.aliexpress.com/item/Best-Price-Original-3-5-LCD-TFT-Touch-Screen-Display-for-Raspberry-Pi-2-Model/32443379727.html) super cheap $15 3.5" TFT touch screen. It is not really useful for the HomeKit project, but since I have it, might as well make it work!
+
+- First copy files to Raspberry
+
+ `rsync -avz -e ssh Downloads/raspberry_35_inch_ts/LCD_show.tar.gz `pi@192.168.1.155:TFTDriver/`
+
+- Install the driver
+
+ ```
+ tar -xzvf LCD_show.tar.gz
+ cd  LCD-show
+ sudo ./LCD35_v1
+ ```
+
 - RPi should reboot and TFT should start
+
 - If you want to use the HDMI, you can run command: `sudo./LCD_hdmi`
-- When you update the sytem, you must run command:
-```
-   sudo apt-mark hold raspberrypi-bootloader
-   sudo apt-get update
-   sudo apt-get upgrade
-```
 
-## Install required libraries
-
-```
-sudo su
-apt-get install git-core libnss-mdns libavahi-compat-libdnssd-dev -y
-```
-
-## Install Node
-
- - Get latest from here :https://nodejs.org/en/download/
+- Note: When you update the sytem, you must prevent the bootloader from updating
 
  ```
- wget https://nodejs.org/dist/v5.2.0/node-v5.2.0-linux-armv7l.tar.gz
- tar -xvf node-v5.2.0-linux-armv7l.tar.gz 
- cd node-v5.2.0-linux-armv7l
- sudo cp -R * /usr/local
- npm install -g node-gyp
+ sudo apt-mark hold raspberrypi-bootloader
+ sudo apt-get update
+ sudo apt-get upgrade
  ```
 
-## Install HAPNodeJS
+## Some useful commands
 
-```
-git clone https://github.com/KhaosT/HAP-NodeJS.git
-cd HAP-NodeJS/
-npm install node-persist && npm install srp && npm install mdns --unsafe-perm
-npm install debug
-npm install ed25519 --unsafe-perm
-npm install curve25519 --unsafe-perm
-npm install mqtt --unsafe-perm
+- SSH: `ssh pi@192.168.1.155`
 
-```
+- Shutdown: `sudo shutdown -h now`
 
-## Install an MQTT server [Mosca](https://github.com/mcollina/mosca)
+- Reboot: `sudo shutdown -r 0`
 
-`npm install mosca bunyan -g --unsafe-perm`
-`mosca -v | bunyan`
+- Disk space: `df -h`
 
+## To do
 
+- VPN
 
+- [screen](http://www.gnu.org/software/screen/manual/screen.html)
 
-## VPN
-
-
-## MQTT 
-https://github.com/Imroy/pubsubclient
-
-
-
-## Snippets
-
- - Shutdown: `sudo shutdown -h now`
- - Reboot: `sudo shutdown -r 0`
- - SSH: `ssh pi@192.168.1.155`
- - Disk space: `df -h`
-
+- 

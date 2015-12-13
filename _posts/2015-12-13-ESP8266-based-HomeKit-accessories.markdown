@@ -8,40 +8,52 @@ author: "Ady"
 
 Apple announced HomeKit a while ago. Quite a few HomeKit devices have been showing up at stores.
 
-## Some great heading (h2)
+## HAP-NodeJS
 
-Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu.
+These instructions are specific to RaspberryPi. I didn't want to keep a computer running all the time, so I chose to install HAP-NodeJS on a RaspberryPi. You might wanna install HAP-NodeJS on a computer too just as a backup option.
 
-Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc. Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+### Required libraries
 
-## Another great heading (h2)
+- HAP-NodeJS requires some libraries, lets install them first
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt. Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit.
+ ```
+ sudo su
+ apt-get install git-core libnss-mdns libavahi-compat-libdnssd-dev -y
+ ```
 
-### Some great subheading (h3)
+### Node
 
-Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum. In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum.
+You can get the link to the latest version of Node from [here](https://nodejs.org/en/download/). I meant to install Node v4.0 but installed v5.2 by mistake. It works anyway, at least so far.
 
-Phasellus et hendrerit mauris. Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc.
+ - Install node and some dependencies with the following commands
 
-### Some great subheading (h3)
+  ```
+  wget https://nodejs.org/dist/v5.2.0/node-v5.2.0-linux-armv7l.tar.gz
+  tar -xvf node-v5.2.0-linux-armv7l.tar.gz 
+  cd node-v5.2.0-linux-armv7l
+  sudo cp -R * /usr/local
+  npm install -g node-gyp
+  ```
 
-Praesent varius interdum vehicula. Aenean risus libero, placerat at vestibulum eget, ultricies eu enim. Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing eget est.
+## Install HAPNodeJS
 
-> This quote will change your life. It will reveal the secrets of the universe, and all the wonders of humanity. Don't misuse it.
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce bibendum neque eget nunc mattis eu sollicitudin enim tincidunt.
-
-### Some great subheading (h3)
-
-Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin convallis mi ac felis pharetra aliquam. Curabitur dignissim accumsan rutrum.
-
-```html
-<html>
-  <head>
-  </head>
-  <body>
-    <p>Hello, World!</p>
-  </body>
-</html>
 ```
+git clone https://github.com/KhaosT/HAP-NodeJS.git
+cd HAP-NodeJS/
+npm install node-persist && npm install srp && npm install mdns --unsafe-perm
+npm install debug
+npm install ed25519 --unsafe-perm
+npm install curve25519 --unsafe-perm
+npm install mqtt --unsafe-perm
+
+```
+
+## Install an MQTT server [Mosca](https://github.com/mcollina/mosca)
+
+`npm install mosca bunyan -g --unsafe-perm`
+`mosca -v | bunyan`
+
+## MQTT 
+https://github.com/Imroy/pubsubclient
+
+
