@@ -6,7 +6,24 @@ categories: blog post
 author: "Ady"
 ---
 
-Apple announced HomeKit a while ago. Quite a few HomeKit devices have been showing up at stores.
+# Background
+
+Apple announced HomeKit a while ago. Lately, quite a few HomeKit devices have been showing up at stores. Despite being convinced about HomeKit's awesomeness I havent really bought a single official accessory yet. A few months ago, I stumbled upon [these](https://www.youtube.com/watch?v=jtk_X40radU) [videos](https://www.youtube.com/watch?v=VJTFwXa_Q0I). They opened up a whole new world of ESP8266 to me. In the next few weeks I got [this](https://www.instagram.com/p/6L7hbpEdT4/?taken-by=adysan) working with NodeMCU firmware running on the ESP8266. It did work but I didn't find the lua firmware very appealing. 
+
+Since then I've been tinkering a lot with the [esp8266/Arduino](https://github.com/esp8266/Arduino) port. Last week I published this [Christmas Light project](https://github.com/AdySan/ChristmasLight). Again, it does work, but I'd rather not open a webpage everytime I want to control the light. So we are back to HomeKit!
+
+# Topology
+
+Lets talk about that [video](https://www.youtube.com/watch?v=VJTFwXa_Q0I) a litte. Being completely new to ESP8266, Node, MQTT, etc. I was really cofused about how this stuff was working. Now that I have the same thing working, let me try and explain a little. Here are the components involved:
+
+ - HAP-NodeJS running on the Raspberry Pi
+ - MQTT Broker running on the Raspberry Pi
+ - iPhone with the HomeKit accessory paired and configured
+ - LED connected to an ESP8266 module
+ - And of course a wireless router
+
+The HAP-NodeJS server connects to a MQTT broker (which is also running on the Raspberry Pi) so that it can publish messages on a certain topic. The ESP8266 module also connects to the MQTT broker and subscrbes to a certain topic. Telling Siri to turn on/off the light, triggers a certain accessory action on the HAP-NodeJS server. This action publishes a message "LightOn" on the topic "Light". The ESP8266 has also subscribed to same topic "Light". It receves the message, parses it, and turns on the LED. 
+
 
 ## HAP-NodeJS
 

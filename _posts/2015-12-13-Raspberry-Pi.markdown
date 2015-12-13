@@ -40,16 +40,23 @@ My Raspberry Pi [kit](http://www.amazon.com/gp/product/B00MV6TAJI?) came with an
 
  - The file should look as follows:
 
-```
-auto lo
-iface lo inet loopback
-iface eth0 inet dhcp
-allow-hotplug wlan0
-auto wlan0
-iface wlan0 inet dhcp
-wpa-ssid "Your Network SSID"
-wpa-psk "Your Password"
-```
+	```
+	auto lo	
+
+	iface lo inet loopback	
+
+	iface eth0 inet dhcp	
+
+	allow-hotplug wlan0	
+
+	auto wlan0	
+
+	iface wlan0 inet dhcp	
+
+	wpa-ssid "Your Network SSID"	
+
+	wpa-psk "Your Password"
+	```
  	
  - Connect to the network
 
@@ -63,11 +70,17 @@ wpa-psk "Your Password"
 
 	```
 	wlan0 Link encap:Ethernet HWaddr 80:1f:02:aa:12:58
+
      inet addr:192.168.1.8 Bcast:192.168.1.255 Mask:255.255.255.0
+    
      UP BROADCAST RUNNING MULTICAST MTU:1500 Metric:1
+    
      RX packets:154 errors:0 dropped:173 overruns:0 frame:0
+    
      TX packets:65 errors:0 dropped:0 overruns:0 carrier:0
+    
      collisions:0 txqueuelen:1000
+    
      RX bytes:32399 (31.6 KiB) TX bytes:13036 (12.7 KiB)
    	```
 
@@ -117,7 +130,7 @@ More [here](https://www.raspberrypi.org/documentation/linux/usage/users.md)
 
 ### TFT Driver
 
-![TFT]({{ site.url }}/images/RPi_TFT.jpg)
+![TFT]({{ site.url }}/images/RPi_TFT.jpg =250x)
 
 I bought [this](http://www.aliexpress.com/item/Best-Price-Original-3-5-LCD-TFT-Touch-Screen-Display-for-Raspberry-Pi-2-Model/32443379727.html) super cheap $15 3.5" TFT touch screen. It is not really useful for the HomeKit project, but since I have it, might as well make it work!
 
@@ -129,7 +142,9 @@ I bought [this](http://www.aliexpress.com/item/Best-Price-Original-3-5-LCD-TFT-T
 
  ```
  tar -xzvf LCD_show.tar.gz
+ 
  cd  LCD-show
+ 
  sudo ./LCD35_v1
  ```
 
@@ -159,6 +174,6 @@ I bought [this](http://www.aliexpress.com/item/Best-Price-Original-3-5-LCD-TFT-T
 
 - VPN
 
-- [screen](http://www.gnu.org/software/screen/manual/screen.html)
+- [screen](http://www.gnu.org/software/screen/manual/screen.html): This helps to monitor multiple processes running on the RPi. Very useful when running HAP-NodeJS and mosca (MQTT broker) at the same time.
 
-- 
+- Start processes at bootup
