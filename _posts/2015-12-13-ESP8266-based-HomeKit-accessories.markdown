@@ -119,7 +119,7 @@ Here are some screenshots:
 
 </br>
 <p align="center">
-<img src="{{ site.url }}/images/HM1.png" align="middle"alt="Circuit" height=“600”> <img src="{{ site.url }}/images/HM2.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM3.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM4.png" align="middle"alt="Circuit" height=“600"> 
+<img src="{{ site.url }}/images/HM1.png" align="middle"alt="Circuit" height=“600”> <img src="{{ site.url }}/images/HM2.png" align="middle"alt="Circuit" height=“600"> 
 </p>
 
 
