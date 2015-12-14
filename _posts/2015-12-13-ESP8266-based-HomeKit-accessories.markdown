@@ -24,7 +24,7 @@ Involving HomeKit perhaps makes this HelloWorld kind of project a little too com
 
 # Topology
 
-Lets talk about that [video](https://www.youtube.com/watch?v=VJTFwXa_Q0I) a litte. Being completely new to ESP8266, Node, MQTT, etc. I was really cofused about how this stuff was working. Now that I have the same thing working, let me try and explain a little. Here are the components involved:
+Let’s talk about that [video](https://www.youtube.com/watch?v=VJTFwXa_Q0I) a litte. Being completely new to ESP8266, Node, MQTT, etc. I was really cofused about how this stuff was working. Now that I have the same thing working, let me try and explain a little. Here are the components involved:
 
  - HAP-NodeJS running on the Raspberry Pi
  - MQTT Broker running on the Raspberry Pi
@@ -44,7 +44,7 @@ These instructions are specific to RaspberryPi. I didn't want to keep a computer
 
 ### Install required libraries
 
-- HAP-NodeJS requires some libraries, lets install them first
+- HAP-NodeJS requires some libraries, let’s install them first
 
 ```bash
 sudo su
@@ -98,26 +98,6 @@ If mosca runs without problems you should see something like this
 
 ![MOSCA]({{ site.url }}/images/mosca.png)
 
-## HomeKit App
-
-Unfortunately Apple doesn’t provide a stock app for HomeKit. For adding and pairing the HomeKit accessory, you’ll need something. The most polished app I’ve seen is [Matthias Hochgatterer’s](https://twitter.com/brutella) [Home](http://selfcoded.com/home/) app.
-
-If you can build your own app, try Apple’s official [HomeKit Catalog](https://developer.apple.com/library/ios/samplecode/HomeKitCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40015048) app. The maker of HAP-NodeJS, KhaosT, also has his [own version](https://github.com/KhaosT/HomeKit-Demo) of this app.
-
-For Pairing use this pin code from the HAP-NodeJS source
-
-```javascript
-light.pincode = "031-45-154";
-```
-
-Here are some screenshots:
-
-
-<p align="center">
-<img src="{{ site.url }}/images/HM1.png" align="middle"alt="Circuit" style="heigh: 400px;"> <img src="{{ site.url }}/images/HM2.png" align="middle"alt="Circuit" style="heigh: 400px;"> <img src="{{ site.url }}/images/HM3.png" align="middle"alt="Circuit" style="heigh: 400px;"> <img src="{{ site.url }}/images/HM4.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM5.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM6.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM7.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM8.png" align="middle"alt="Circuit" height=“600”> <img src="{{ site.url }}/images/HM9.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM10.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM11.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM12.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM13.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM14.png" align="middle"alt="Circuit" height=“600">
-</p>
-</br>
-
 
 ## ESP8266 Arduino
 
@@ -134,7 +114,7 @@ All this sketch does is to connect to WiFi, connect to the MQTT broker and subsc
 
 ### MQTT Library
 
-The sketch is based on an example in the [PubSubclient](https://github.com/Imroy/pubsubclient) MQTT library for ESP8266. 
+The sketch is based on an [example](https://github.com/Imroy/pubsubclient/blob/master/examples/mqtt_subscriber/mqtt_subscriber.ino) in the [PubSubclient](https://github.com/Imroy/pubsubclient) MQTT library for ESP8266. 
 
 
 ## Making a new HomeKit accessory
@@ -179,6 +159,27 @@ var client = mqtt.connect(options);
 <p align="center">
 <img src="{{ site.url }}/images/AdyLightOn.PNG" align="middle"alt="Circuit" height="600"> <img src="{{ site.url }}/images/AdyLightOff.PNG" align="middle"alt="Circuit" height="600">
 </p>
+
+
+## HomeKit App
+
+Unfortunately Apple doesn’t provide a stock app for HomeKit. For adding and pairing the HomeKit accessory, you’ll need something. The most polished app I’ve seen is [Matthias Hochgatterer’s](https://twitter.com/brutella) [Home](http://selfcoded.com/home/) app.
+
+If you can build your own app, try Apple’s official [HomeKit Catalog](https://developer.apple.com/library/ios/samplecode/HomeKitCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40015048) app. The maker of HAP-NodeJS, KhaosT, also has his [own version](https://github.com/KhaosT/HomeKit-Demo) of this app.
+
+For Pairing use this pin code from the HAP-NodeJS source
+
+```javascript
+light.pincode = "031-45-154";
+```
+
+Here are some screenshots:
+
+
+<p align="center">
+<img src="{{ site.url }}/images/HM1.png" align="middle"alt="Circuit" style="heigh: 400px;"> <img src="{{ site.url }}/images/HM2.png" align="middle"alt="Circuit" style="heigh: 400px;"> <img src="{{ site.url }}/images/HM3.png" align="middle"alt="Circuit" style="heigh: 400px;"> <img src="{{ site.url }}/images/HM4.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM5.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM6.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM7.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM8.png" align="middle"alt="Circuit" height=“600”> <img src="{{ site.url }}/images/HM9.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM10.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM11.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM12.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM13.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM14.png" align="middle"alt="Circuit" height=“600">
+</p>
+</br>
 
 
 ## Further reading
