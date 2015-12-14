@@ -40,7 +40,7 @@ I’m assuming you have a working Raspberry Pi running Raspbian. If not go [here
 
 ## HAP-NodeJS
 
-These instructions are specific to RaspberryPi. I didn't want to keep a computer running all the time, so I chose to install HAP-NodeJS on a RaspberryPi. You might wanna [install](https://github.com/KhaosT/HAP-NodeJS/wiki) HAP-NodeJS on a computer too just as a backup option.
+These instructions are specific to RaspberryPi. I didn't want to keep a computer running all the time, so I chose to install HAP-NodeJS on a RaspberryPi. You might wanna [install](https://github.com/KhaosT/HAP-NodeJS/wiki) HAP-NodeJS on a computer too just as a backup option for testing.
 
 ### Install required libraries
 
@@ -99,7 +99,7 @@ If mosca runs without problems you should see something like this
 ![MOSCA]({{ site.url }}/images/mosca.png)
 
 
-## ESP8266 Arduino
+## ESP8266 Arduino sketch
 
 You can find the source code for this part on GitHub at [https://github.com/AdySan/HomeKitLight](https://github.com/AdySan/HomeKitLight)
 
@@ -156,7 +156,7 @@ var client = mqtt.connect(options);
 ![mosca connected]({{ site.url }}/images/moscaconnected.png)
 
 
-## HomeKit App
+## HomeKit accessory pairing
 
 Unfortunately Apple doesn’t provide a stock app for HomeKit. For adding and pairing the HomeKit accessory, you’ll need something. The most polished app I’ve seen is [Matthias Hochgatterer’s](https://twitter.com/brutella) [Home](http://selfcoded.com/home/) app.
 
