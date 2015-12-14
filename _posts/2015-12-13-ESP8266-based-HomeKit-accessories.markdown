@@ -136,7 +136,7 @@ All this sketch does is to connect to WiFi, connect to the MQTT broker and subsc
 The sketch is based on an example in the [PubSubclient](https://github.com/Imroy/pubsubclient) MQTT library for ESP8266. 
 
 
-### Make a new HomeKit accessory
+## Making a new HomeKit accessory
 
 You can refer to my fork of HAP-NodeJS [here](https://github.com/AdySan/HAP-NodeJS/blob/master/accessories/AdyLight_accessory.js)
 
