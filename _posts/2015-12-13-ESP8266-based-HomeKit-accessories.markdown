@@ -114,9 +114,12 @@ Here are some screenshots:
 
 </br>
 <p align="center">
-<img src="{{ site.url }}/images/HM1.png" align="middle"alt="Circuit" height=“300”> <img src="{{ site.url }}/images/HM2.png" align="middle"alt="Circuit" height=“300"> <img src="{{ site.url }}/images/HM3.png" align="middle"alt="Circuit" height=“300"> <img src="{{ site.url }}/images/HM4.png" align="middle"alt="Circuit" height=“300"> <img src="{{ site.url }}/images/HM5.png" align="middle"alt="Circuit" height=“300"> <img src="{{ site.url }}/images/HM6.png" align="middle"alt="Circuit" height=“300"> <img src="{{ site.url }}/images/HM7.png" align="middle"alt="Circuit" height=“300">
+<img src="{{ site.url }}/images/HM1.png" align="middle"alt="Circuit" height=“600”> <img src="{{ site.url }}/images/HM2.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM3.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM4.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM5.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM6.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM7.png" align="middle"alt="Circuit" height=“600">
+</p>
 
-<img src="{{ site.url }}/images/HM8.png" align="middle"alt="Circuit" height=“300”> <img src="{{ site.url }}/images/HM9.png" align="middle"alt="Circuit" height=“300"> <img src="{{ site.url }}/images/HM10.png" align="middle"alt="Circuit" height=“300"> <img src="{{ site.url }}/images/HM11.png" align="middle"alt="Circuit" height=“300"> <img src="{{ site.url }}/images/HM12.png" align="middle"alt="Circuit" height=“300"> <img src="{{ site.url }}/images/HM13.png" align="middle"alt="Circuit" height=“300"> <img src="{{ site.url }}/images/HM14.png" align="middle"alt="Circuit" height=“300">
+</br>
+<p align="center">
+<img src="{{ site.url }}/images/HM8.png" align="middle"alt="Circuit" height=“600”> <img src="{{ site.url }}/images/HM9.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM10.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM11.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM12.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM13.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM14.png" align="middle"alt="Circuit" height=“600">
 </p>
 
 
