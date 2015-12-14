@@ -114,7 +114,7 @@ Here are some screenshots:
 
 
 <p align="center">
-<img src="{{ site.url }}/images/HM1.PNG" align="middle"alt="Circuit" height=“600”> <img src="{{ site.url }}/images/HM2.PNG" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM3.png" align="middle"alt="Circuit" height=“600">
+<img src="{{ site.url }}/images/HM1.png" align="middle"alt="Circuit" style="heigh: 400px;"> <img src="{{ site.url }}/images/HM2.png" align="middle"alt="Circuit" style="heigh: 400px;"> <img src="{{ site.url }}/images/HM3.png" align="middle"alt="Circuit" style="heigh: 400px;">
 </p>
 
 <p align="center">
