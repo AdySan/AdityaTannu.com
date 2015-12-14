@@ -38,7 +38,7 @@ Here’s how it works: On boot up HAP-NodeJS server connects to a MQTT broker (w
 
 I’m assuming you have a working Raspberry Pi running Raspbian. If not go [here]({{ site.baseurl }}/blog/post/2015/12/13/Raspberry-Pi.html) and read how to get that working.
 
-## [HAP-NodeJS](https://github.com/KhaosT/HAP-NodeJS)
+## HAP-NodeJS
 
 These instructions are specific to RaspberryPi. I didn't want to keep a computer running all the time, so I chose to install HAP-NodeJS on a RaspberryPi. You might wanna [install](https://github.com/KhaosT/HAP-NodeJS/wiki) HAP-NodeJS on a computer too just as a backup option.
 
@@ -102,7 +102,7 @@ If mosca runs without problems you should see something like this
 
 Unfortunately Apple doesn’t provide a stock app for HomeKit. For adding and pairing the HomeKit accessory, you’ll need something. The most polished app I’ve seen is [Matthias Hochgatterer’s](https://twitter.com/brutella) [Home](http://selfcoded.com/home/) app.
 
-If you can build your own app, try Apple’s official [HomeKit Catalog](https://developer.apple.com/library/ios/samplecode/HomeKitCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40015048) app. The maker of HAP-NoheJS, KhaosT, also has his [own version](https://github.com/KhaosT/HomeKit-Demo) of this app.
+If you can build your own app, try Apple’s official [HomeKit Catalog](https://developer.apple.com/library/ios/samplecode/HomeKitCatalog/Introduction/Intro.html#//apple_ref/doc/uid/TP40015048) app. The maker of HAP-NodeJS, KhaosT, also has his [own version](https://github.com/KhaosT/HomeKit-Demo) of this app.
 
 For Pairing use this pin code from the HAP-NodeJS source
 
@@ -116,6 +116,7 @@ Here are some screenshots:
 <p align="center">
 <img src="{{ site.url }}/images/HM1.png" align="middle"alt="Circuit" style="heigh: 400px;"> <img src="{{ site.url }}/images/HM2.png" align="middle"alt="Circuit" style="heigh: 400px;"> <img src="{{ site.url }}/images/HM3.png" align="middle"alt="Circuit" style="heigh: 400px;"> <img src="{{ site.url }}/images/HM4.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM5.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM6.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM7.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM8.png" align="middle"alt="Circuit" height=“600”> <img src="{{ site.url }}/images/HM9.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM10.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM11.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM12.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM13.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM14.png" align="middle"alt="Circuit" height=“600">
 </p>
+</br>
 
 
 ## ESP8266 Arduino
