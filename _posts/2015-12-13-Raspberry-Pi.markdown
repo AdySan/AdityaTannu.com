@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Raspberry Pi installation from scratch"
-date:   2015-12-13 12:00:00
+date:   2015-12-13 11:00:00
 categories: blog post
 author: "Ady"
 ---
@@ -9,6 +9,10 @@ author: "Ady"
 I bought my Raspberry Pi a few months ago, mostly out of curiosity. I set up [HAP-NodeJS](https://github.com/KhaosT/HAP-NodeJS) on it over the next few weeks and got [this](https://www.instagram.com/p/6L7hbpEdT4/?taken-by=adysan) HomeKit project working. Recently I have been tinkering a lot with [ESP8266/Arduino](https://github.com/esp8266/Arduino) and decided to document some projects on this website. For the HomeKit project, I had chosen to use my Raspberry Pi as the HAP server. To help make a better guide for the project (and help me not to forget!), a few days ago I put in a new SD card into the Pi and set it up from scratch. Here are the steps I followed.
 
 *Note: I am not a software developer, so I might have made some newbie mistakes and taken some shortcuts. I would appreciate if someone can point them out.*
+
+<p align="center">
+<img src="{{ site.url }}/images/RpiKit.jpg" align="middle"alt=“RPiKit” height=“600”>
+</p>
 
 ## NOOBS 
 
@@ -62,9 +66,11 @@ My Raspberry Pi [kit](http://www.amazon.com/gp/product/B00MV6TAJI?) came with an
 
 	`sudo service networking reload`
 
+
  - Check if you have a valid IP address
 
 	`ifconfig`
+
 
  - Should look something like this.
 
@@ -83,6 +89,7 @@ My Raspberry Pi [kit](http://www.amazon.com/gp/product/B00MV6TAJI?) came with an
     
      RX bytes:32399 (31.6 KiB) TX bytes:13036 (12.7 KiB)
    	```
+
 
 - Now that wifi is working, next step is to enable SSH, so you can get rid of the keyboard, mouse and HDMI display.
 
@@ -130,13 +137,17 @@ More [here](https://www.raspberrypi.org/documentation/linux/usage/users.md)
 
 ### TFT Driver
 
-![TFT]({{ site.url }}/images/RPi_TFT.jpg)
+</br>
+<p align="center">
+<img src="{{ site.url }}/images/RPi_TFT.jpg" align="middle"alt=“RPiTFT” height=“600”>
+</p>
+
 
 I bought [this](http://www.aliexpress.com/item/Best-Price-Original-3-5-LCD-TFT-Touch-Screen-Display-for-Raspberry-Pi-2-Model/32443379727.html) super cheap $15 3.5" TFT touch screen. It is not really useful for the HomeKit project, but since I have it, might as well make it work!
 
 - First copy files to Raspberry
 
- `rsync -avz -e ssh Downloads/raspberry_35_inch_ts/LCD_show.tar.gz `pi@192.168.1.155:TFTDriver/`
+ `rsync -avz -e ssh Downloads/raspberry_35_inch_ts/LCD_show.tar.gz pi@192.168.1.155:TFTDriver/`
 
 - Install the driver
 
