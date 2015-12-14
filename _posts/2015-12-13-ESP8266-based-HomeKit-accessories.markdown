@@ -117,6 +117,11 @@ Here are some screenshots:
 <img src="{{ site.url }}/images/AdyLightOn.PNG" align="middle"alt="Circuit" height="600"> <img src="{{ site.url }}/images/AdyLightOff.PNG" align="middle"alt="Circuit" height="600">
 </p>
 
+</br>
+<p align="center">
+<img src="{{ site.url }}/images/HM1.png" align="middle"alt="Circuit" height=“600”> <img src="{{ site.url }}/images/HM2.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM3.png" align="middle"alt="Circuit" height=“600"> <img src="{{ site.url }}/images/HM4.png" align="middle"alt="Circuit" height=“600"> 
+</p>
+
 
 ## ESP8266 Arduino
 
