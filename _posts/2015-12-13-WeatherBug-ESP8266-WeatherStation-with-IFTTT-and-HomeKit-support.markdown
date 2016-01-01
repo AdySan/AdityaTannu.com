@@ -19,16 +19,16 @@ I assume you're familiar with Daniel Eichhorn's [ESP8266 Weather Station](http:/
 
 - Used a WeMos D1 mini with the DHT shield
 
+</br>
+<p align="center">
+<img src="{{ site.url }}/images/WeMosD1mini.jpg" align="middle"alt="WeMos D1 Mini" height="300"> <img src="{{ site.url }}/images/WeatherBug.jpg" align="middle"alt="WeatherBug" height="300">
+</p>
+
 ## Software changes
 
 - Added IFTTT support for getting notifications when indoor temperature is too high or low.
 - Publish indoor temperature over MQTT, so it is accessible via HomeKit with Siri.
 - Made it work with Arduino 1.6.7 by using NTPclient library.
-
-</br>
-<p align="center">
-<img src="{{ site.url }}/images/WeMosD1mini.jpg" align="middle"alt="WeMos D1 Mini" height="300"> <img src="{{ site.url }}/images/WeatherBug.jpg" align="middle"alt="WeatherBug" height="300">
-</p>
 
 </br>
 <p align="center">
