@@ -17,7 +17,7 @@ I assume you're familiar with Daniel Eichhorn's [ESP8266 Weather Station](http:/
 
 ### Hardware changes
 
-- Used a WeMos D1 mini with the DHT shield
+- Used a [WeMos D1 mini with the DHT shield](http://www.aliexpress.com/item/WeMos-D1-mini-DHT-Shield/32532550299.html)
 
 </br>
 <p align="center">
@@ -28,7 +28,7 @@ I assume you're familiar with Daniel Eichhorn's [ESP8266 Weather Station](http:/
 
 - Added IFTTT support for getting notifications when indoor temperature is too high or low.
 - Publish indoor temperature over MQTT, so it is accessible via HomeKit with Siri.
-- Made it work with Arduino 1.6.7 by using NTPclient library.
+- Made it work with Arduino 1.6.7 by using [NTPclient](https://github.com/FWeinb/NTPClient) library.
 
 </br>
 <p align="center">
@@ -48,7 +48,7 @@ First thing I would recommend is to get the original WeatherStation code working
 
 ### IFTTT
 
-- Go enable the IFTTT Maker channel here: https://ifttt.com/maker
+- Go enable the IFTTT Maker channel here: (https://ifttt.com/maker)
 - Get your API key.
 - Paste the key [here](https://github.com/AdySan/WeatherBug/blob/master/WeatherBug.ino#L86) in my WeatherBug code.
 
