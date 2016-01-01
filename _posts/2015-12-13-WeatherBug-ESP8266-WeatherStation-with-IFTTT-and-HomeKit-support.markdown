@@ -15,7 +15,7 @@ I assume you're familiar with Daniel Eichhorn's [ESP8266 Weather Station](http:/
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </p>
 
-## Hardware changes
+### Hardware changes
 
 - Used a WeMos D1 mini with the DHT shield
 
@@ -24,7 +24,7 @@ I assume you're familiar with Daniel Eichhorn's [ESP8266 Weather Station](http:/
 <img src="{{ site.url }}/images/WeMosD1mini.jpg" align="middle"alt="WeMos D1 Mini" height="300"> <img src="{{ site.url }}/images/WeatherBug.jpg" align="middle"alt="WeatherBug" height="300">
 </p>
 
-## Software changes
+### Software changes
 
 - Added IFTTT support for getting notifications when indoor temperature is too high or low.
 - Publish indoor temperature over MQTT, so it is accessible via HomeKit with Siri.
@@ -42,28 +42,28 @@ As you may [know](http://adyshan.com/baby/2015/10/08/its-a-girl.html), we're hav
 
 # Steps to reproduce
 
-## WeatherStation
+### WeatherStation
 
 First thing I would recommend is to get the original WeatherStation code working by following the instructions [here](https://github.com/squix78/esp8266-weather-station).
 
-## IFTTT
+### IFTTT
 
 - Go enable the IFTTT Maker channel here: https://ifttt.com/maker
 - Get your API key.
 - Paste the key [here](https://github.com/AdySan/WeatherBug/blob/master/WeatherBug.ino#L86) in my WeatherBug code.
 
-## HomeKit
+### HomeKit
 
 - If you're wondering how HomeKit fits into the picture here, first go read [this]({{ site.baseurl }}/blog/post/2015/12/13/ESP8266-based-HomeKit-accessories.html) and try to get that working. I've written a fairly detailed guide to make generic ESP8266 based HomeKit accessories. 
 - If you notice, the accessories [folder](https://github.com/AdySan/HAP-NodeJS/tree/master/accessories) also includes a Temperature Sensor. All we need to do is to provide it the temperature value by publishing it over MQTT.
 - You can see a working example of the accessory [here](https://github.com/AdySan/HAP-NodeJS/blob/master/accessories/NurseryTemperatureSensor_accessory.js) in my fork on HAP-NodeJS.
 
-## Known issues
+# Known issues
 
 - The UI does freeze when updating sometimes.
 - I think I fixed the [hysterisis problem](https://twitter.com/Ady/status/681942912817467392), not sure yet.
 
-## Future improvements
+# Future improvements
 
 - I don't want the entire UI to scroll. Since this is a temperature sensor first, I want the indoor temperature to be static on the screen, the rest of the screen and scroll through different items like forecast, outside temperature, etc.
 - Try to get Helvetica on this screen. I really don't like Arial..
