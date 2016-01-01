@@ -10,15 +10,8 @@ author: "Ady"
 
 I assume you're familiar with Daniel Eichhorn's [ESP8266 Weather Station](http://blog.squix.ch/2015/12/esp8266-weather-station-measuring.html). I modified it to do a little more.
 
-</br>
-<p align="center">
-<img src="{{ site.url }}/images/WeMosD1mini.jpg" align="middle"alt="WeMos D1 Mini" height="300"> <img src="{{ site.url }}/images/WeatherBug.jpg" align="middle"alt="WeatherBug" height="300">
-</p>
-
-</br>
-<p align="center">
-<img src="{{ site.url }}/images/TooCold.PNG" align="middle"alt="TooCold" height="400"> <img src="{{ site.url }}/images/TooHot.PNG" align="middle"alt="TooHot" height="400"> <img src="{{ site.url }}/images/CurrentTemp.PNG" align="middle"alt="SiriTemperature" height="400">
-</p>
+<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">The WeatherBug works! <a href="https://t.co/Cho8u8rjm9">pic.twitter.com/Cho8u8rjm9</a></p>&mdash; Ady (@Ady) <a href="https://twitter.com/Ady/status/682983114302291968">January 1, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Hardware changes
 
@@ -29,6 +22,17 @@ I assume you're familiar with Daniel Eichhorn's [ESP8266 Weather Station](http:/
 - Added IFTTT support for getting notifications when indoor temperature is too high or low.
 - Publish indoor temperature over MQTT, so it is accessible via HomeKit with Siri.
 - Made it work with Arduino 1.6.7 by using NTPclient library.
+
+</br>
+<p align="center">
+<img src="{{ site.url }}/images/WeMosD1mini.jpg" align="middle"alt="WeMos D1 Mini" height="300"> <img src="{{ site.url }}/images/WeatherBug.jpg" align="middle"alt="WeatherBug" height="300">
+</p>
+
+</br>
+<p align="center">
+<img src="{{ site.url }}/images/TooCold.PNG" align="middle"alt="TooCold" height="400"> <img src="{{ site.url }}/images/TooHot.PNG" align="middle"alt="TooHot" height="400"> <img src="{{ site.url }}/images/CurrentTemp.PNG" align="middle"alt="SiriTemperature" height="400">
+</p>
+
 
 # Background
 
