@@ -51,6 +51,7 @@ First thing I would recommend is to get the original WeatherStation code working
 - Go enable the IFTTT Maker channel here: (https://ifttt.com/maker)
 - Get your API key.
 - Paste the key [here](https://github.com/AdySan/WeatherBug/blob/master/WeatherBug.ino#L86) in my WeatherBug code.
+- Make two recipes like [this one](https://ifttt.com/recipes/365537-weatherbug-low-temperature) with an event name of `Nursery_Temperature_Low` and `Nursery_Temperature_High`
 
 ### HomeKit
 
@@ -62,8 +63,10 @@ First thing I would recommend is to get the original WeatherStation code working
 
 - The UI does freeze when updating sometimes.
 - I think I fixed the [hysterisis problem](https://twitter.com/Ady/status/681942912817467392), not sure yet.
+- Some emojis don't work in the IFTTT notification
 
 # Future improvements
 
 - I don't want the entire UI to scroll. Since this is a temperature sensor first, I want the indoor temperature to be static on the screen, the rest of the screen and scroll through different items like forecast, outside temperature, etc.
 - Try to get Helvetica on this screen. I really don't like Arial..
+- Use HTTPS for IFTTT, not really sure why though..
