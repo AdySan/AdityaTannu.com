@@ -12,14 +12,13 @@ I assume you're familiar with Daniel Eichhorn's [ESP8266 Weather Station](http:/
 
 </br>
 <p align="center">
-<img src="{{ site.url }}/images/WeMosD1mini.jpg" align="middle"alt="WeMos D1 Mini" height="600"> <img src="{{ site.url }}/images/WeatherBug.jpg" align="middle"alt="WeatherBug" height="600">
+<img src="{{ site.url }}/images/WeMosD1mini.jpg" align="middle"alt="WeMos D1 Mini" height="300"> <img src="{{ site.url }}/images/WeatherBug.jpg" align="middle"alt="WeatherBug" height="300">
 </p>
 
 </br>
 <p align="center">
 <img src="{{ site.url }}/images/TooCold.PNG" align="middle"alt="TooCold" height="600"> <img src="{{ site.url }}/images/TooHot.PNG" align="middle"alt="TooHot" height="600"> <img src="{{ site.url }}/images/CurrentTemp.PNG" align="middle"alt="SiriTemperature" height="600">
 </p>
-
 
 ## Hardware changes
 
