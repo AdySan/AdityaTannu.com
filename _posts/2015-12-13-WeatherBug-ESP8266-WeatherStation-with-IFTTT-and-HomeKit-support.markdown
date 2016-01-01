@@ -10,7 +10,7 @@ author: "Ady"
 
 I assume you're familiar with Daniel Eichhorn's [ESP8266 Weather Station](http://blog.squix.ch/2015/12/esp8266-weather-station-measuring.html). I modified it to do a little more.
 
-<blockquote class="twitter-video" "twitter-video tw-align-center" lang="en"><p lang="en" dir="ltr">The WeatherBug works! <a href="https://t.co/Cho8u8rjm9">pic.twitter.com/Cho8u8rjm9</a></p>&mdash; Ady (@Ady) <a href="https://twitter.com/Ady/status/682983114302291968">January 1, 2016</a></blockquote>
+<blockquote class="twitter-video" "twitter-tweet tw-align-center" lang="en"><p lang="en" dir="ltr">The WeatherBug works! <a href="https://t.co/Cho8u8rjm9">pic.twitter.com/Cho8u8rjm9</a></p>&mdash; Ady (@Ady) <a href="https://twitter.com/Ady/status/682983114302291968">January 1, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Hardware changes
