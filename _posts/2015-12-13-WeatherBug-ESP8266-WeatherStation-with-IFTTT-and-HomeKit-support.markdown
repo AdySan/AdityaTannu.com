@@ -68,5 +68,11 @@ First thing I would recommend is to get the original WeatherStation code working
 # Future improvements
 
 - I don't want the entire UI to scroll. Since this is a temperature sensor first, I want the indoor temperature to be static on the screen, the rest of the screen and scroll through different items like forecast, outside temperature, etc.
+
+Done!
+
+<blockquote class="twitter-video" lang="en"><p lang="en" dir="ltr">Slightly modified UI for the <a href="https://twitter.com/hashtag/ESP8266?src=hash">#ESP8266</a> WeatherBug. (Thanks for the tips <a href="https://twitter.com/squix78">@squix78</a> !) <a href="https://t.co/5y1kzh02lg">https://t.co/5y1kzh02lg</a> <a href="https://t.co/cTSLFFX2hG">pic.twitter.com/cTSLFFX2hG</a></p>&mdash; Ady (@Ady) <a href="https://twitter.com/Ady/status/683095488569065472">January 2, 2016</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 - Try to get Helvetica on this screen. I really don't like Arial..
 - Use HTTPS for IFTTT, not really sure why though..
