@@ -184,6 +184,12 @@ Here are some screenshots:
 
 ## Further reading
 
+- Here's an Philips Hue clone I made
+
+<blockquote class="twitter-video" lang="en"><p lang="en" dir="ltr">Who needs Philips Hue when you have <a href="https://twitter.com/hashtag/ESP8266?src=hash">#ESP8266</a> and <a href="https://twitter.com/adafruit">@adafruit</a> <a href="https://twitter.com/hashtag/NeoPixels?src=hash">#NeoPixels</a> ? <a href="https://twitter.com/hashtag/HomeKit?src=hash">#HomeKit</a> <a href="https://twitter.com/hashtag/arduino?src=hash">#arduino</a> <a href="https://t.co/F6J0s1j3Hp">pic.twitter.com/F6J0s1j3Hp</a></p>&mdash; Ady (@Ady) <a href="https://twitter.com/Ady/status/679146825136259073">December 22, 2015</a></blockquote>
+<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+
 - [MQTT Lens](https://chrome.google.com/webstore/detail/mqttlens/hemojaaeigabkbcookmlgmdigohjobjm?hl=en): This Chrome app is super useful in testing MQTT
 
 ![MQTTLens]({{ site.url }}/images/MQTTLens.png)
