@@ -11,7 +11,7 @@ author: "Ady"
 I assume you're familiar with Daniel Eichhorn's [ESP8266 Weather Station](http://blog.squix.ch/2015/12/esp8266-weather-station-measuring.html). I modified it to do a little more.
 
 <p align="center">
-<blockquote class="twitter-tweet" lang="en"><p lang="en" dir="ltr">Made <a href="https://twitter.com/hashtag/ESP8266?src=hash">#ESP8266</a> <a href="https://twitter.com/hashtag/Arduino?src=hash">#Arduino</a> OTA firmware updates a little sexier <a href="https://t.co/LZ8Z2jJMDe">pic.twitter.com/LZ8Z2jJMDe</a></p>&mdash; Ady (@Ady) <a href="https://twitter.com/Ady/status/683342658916384768">January 2, 2016</a></blockquote>
+<blockquote class="twitter-video" lang="en"><p lang="en" dir="ltr">Made <a href="https://twitter.com/hashtag/ESP8266?src=hash">#ESP8266</a> <a href="https://twitter.com/hashtag/Arduino?src=hash">#Arduino</a> OTA firmware updates a little sexier <a href="https://t.co/LZ8Z2jJMDe">pic.twitter.com/LZ8Z2jJMDe</a></p>&mdash; Ady (@Ady) <a href="https://twitter.com/Ady/status/683342658916384768">January 2, 2016</a></blockquote>
 <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </p>
