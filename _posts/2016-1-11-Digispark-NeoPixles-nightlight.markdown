@@ -42,6 +42,10 @@ I made a quick night light using some things I found at home. It turned out rath
 
 ![night light 3]({{ site.url }}/images/nightlight3.jpeg)
 
+# Arduino Sketch
+
+<script src="https://gist.github.com/AdySan/27cd7133c7ec8f2d8288.js"></script>
+
 # Future improvements
 
 - If I used an ESP8266 instead of the digispark, I could make it a lot more intelligent. First thing I'd do as turn it On/Off with sunset and sunrise using the [NTPClient](https://github.com/FWeinb/NTPClient) library. Only thing is, I haven't seen any [ESP8266 board](https://twitter.com/Ady/status/686742995626934272) in this form factor yet. And using something like the NodeMCU would be too messy.
