@@ -18,6 +18,8 @@ I made a quick night light using some things I found at home. It turned out rath
 # Features
 - Auto On/Off at night: I wanted to keep the components to the minimum, so didnt even bother with a RTC. Just turns on for 12 hours and stays off for the next 12 hours!
 
+- White plastic enclosure disperses the light from NeoPixels perfectly.
+
 - Slowly fading colors: Well if you're using NeoPixels, might as well make some animations.
 
 - Very little soldering required.
