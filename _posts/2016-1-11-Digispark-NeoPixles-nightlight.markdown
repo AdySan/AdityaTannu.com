@@ -35,9 +35,11 @@ I made a quick night light using some things I found at home. It turned out rath
 # Pictures
 
 ![night light 1]({{ site.url }}/images/nightlight1.jpeg)
-</br>
+
+
 ![night light 2]({{ site.url }}/images/nightlight2.jpeg)
-</br>
+
+
 ![night light 3]({{ site.url }}/images/nightlight3.jpeg)
 
 # Future improvements
