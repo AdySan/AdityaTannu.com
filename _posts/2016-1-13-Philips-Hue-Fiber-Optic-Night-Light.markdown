@@ -9,7 +9,7 @@ author: "Ady"
 After making a [Philips Hue clone](https://twitter.com/Ady/status/679146825136259073), I realized that it would look really nice with a Fiber Optic light. I found a cheap [$3 light](http://www.aliexpress.com/item/Romantic-Color-Changing-Multicolor-Colorful-Fiber-Optic-Night-Light-Bar-Hotel-Decor-Decoration-Lamp/32531102478.html) on AliExpress. It arrived yesterday and seems to have rather decent build quality, for $3 that is. Here's how mine looks.
 
 <p align="center">
-![Fountain Light 1]({{ site.url }}/images/fountainlight2.JPG)
+<img src="{{ site.url }}/images/fountainlight2.JPG" align="middle"alt=Fountain>
 </p>
 
 Next thing I did was of course a teardown...
@@ -23,67 +23,67 @@ Next thing I did was of course a teardown...
 - Here's how the optic fibers look like.
 
 <p align="center">
-![Fountain Light 4]({{ site.url }}/images/fountainlight4.JPG)
+<img src="{{ site.url }}/images/fountainlight4.JPG" align="middle"alt=Fountain>
 </p>
 
 - Opening up the base revels a rather simple circuit, board, button and battery, thats it.
 
 <p align="center">
-![Fountain Light 5]({{ site.url }}/images/fountainlight5.JPG)
+<img src="{{ site.url }}/images/fountainlight5.JPG" align="middle"alt=Fountain>
 </p>
 
 - Looking under the board, there's not much.
 
 <p align="center">
-![Fountain Light 6]({{ site.url }}/images/fountainlight6.JPG)
+<img src="{{ site.url }}/images/fountainlight6.JPG" align="middle"alt=Fountain>
 </p>
 
 - Hmm, I think I can make this better.
 
 <p align="center">
-![Fountain Light 7]({{ site.url }}/images/fountainlight7.JPG)
+<img src="{{ site.url }}/images/fountainlight7.JPG" align="middle"alt=Fountain>
 </p>
 
 - Oh look, a NodeMCU board fits in perfectly in the battery compartment!
 
 <p align="center">
-![Fountain Light 8]({{ site.url }}/images/fountainlight8.JPG)
+<img src="{{ site.url }}/images/fountainlight8.JPG" align="middle"alt=Fountain>
 </p>
 
 - Let's remove the LEDs so I can put some NeoPixels on there.
 
 <p align="center">
-![Fountain Light 9]({{ site.url }}/images/fountainlight9.JPG)
+<img src="{{ site.url }}/images/fountainlight9.JPG" align="middle"alt=Fountain>
 </p>
 
 - I just need this board as a base for the NeoPixels
 
 <p align="center">
-![Fountain Light 10]({{ site.url }}/images/fountainlight10.JPG)
+<img src="{{ site.url }}/images/fountainlight10.JPG" align="middle"alt=Fountain>
 </p>
 
 - Here's my shoddy soldering job, I hope it works.
 
 <p align="center">
-![Fountain Light 11]({{ site.url }}/images/fountainlight11.JPG)
+<img src="{{ site.url }}/images/fountainlight11.JPG" align="middle"alt=Fountain>
 </p>
 
 - Some electrical tape to prevent shorting
 
 <p align="center">
-![Fountain Light 12]({{ site.url }}/images/fountainlight12.JPG)
+<img src="{{ site.url }}/images/fountainlight12.JPG" align="middle"alt=Fountain>
 </p>
 
 - Everything seems to work! Let's put it all back in.
 
 <p align="center">
-![Fountain Light 13]({{ site.url }}/images/fountainlight13.JPG)
+<img src="{{ site.url }}/images/fountainlight13.JPG" align="middle"alt=Fountain>
 </p>
 
 - Here's the final result 
 
 <p align="center">
-![Fountain Light 1]({{ site.url }}/images/fountainlight1.JPG)
+<img src="{{ site.url }}/images/fountainlight1.JPG" align="middle"alt=Fountain>
 </p>
 
 - Let's see it in action!
