@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Philips Hue Fiber Optic Night Light"
+title:  "Philips Hue Fiber Optic Light"
 date:   2016-1-13 12:00:00
 categories: blog post
 author: "Ady"
