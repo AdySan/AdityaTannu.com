@@ -17,7 +17,7 @@ Next thing I did was of course a teardown...
 - Looks like there's three LEDs in there, one each of R-G-B.
 
 <p align="center">
-![Fountain Light 2]({{ site.url }}/images/fountainlight3.JPG)
+<img src="{{ site.url }}/images/fountainlight3.JPG" align="middle"alt=Fountain>
 </p>
 
 - Here's how the optic fibers look like.
