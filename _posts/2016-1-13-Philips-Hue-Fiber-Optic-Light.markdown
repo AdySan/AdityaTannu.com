@@ -1,10 +1,13 @@
 ---
 layout: post
-title:  "Philips Hue Fiber Optic Light"
+title:  "DIY RGB Fiber Optic Light using ESP8266"
 date:   2016-1-13 12:00:00
 categories: blog post
 author: "Ady"
 ---
+
+Note: This post was previously titled 'Philips Hue Fiber Optic Light'. It was changed based on some feedback on [HackeNews](https://news.ycombinator.com/item?id=10899798). I forgot to mention the words DIY, Hack or Clone in the title.
+
 
 After making a [Philips Hue clone](https://twitter.com/Ady/status/679146825136259073), I realized that it would look really nice with a Fiber Optic light. I found a cheap [$3 light](http://www.aliexpress.com/item/Romantic-Color-Changing-Multicolor-Colorful-Fiber-Optic-Night-Light-Bar-Hotel-Decor-Decoration-Lamp/32531102478.html) on AliExpress. It arrived yesterday and seems to have rather decent build quality, for $3 that is. Here's how mine looks.
 
