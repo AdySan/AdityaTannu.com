@@ -119,7 +119,7 @@ The sketch is based on an [example](https://github.com/Imroy/pubsubclient/blob/m
 
 ## Making a new HomeKit accessory
 
-You can refer to my fork of HAP-NodeJS [here](https://github.com/AdySan/HAP-NodeJS/blob/master/accessories/AdyLight_accessory.js)
+You can refer to my fork of HAP-NodeJS [here](https://github.com/AdySan/HAP-NodeJS/blob/master/accessories/ChristmasLight_accessory.js)
 
 - You just need to copy and existing accessory, in this case I copied `Light_accessory.js` to `AdyLight_accessory.js`
 
