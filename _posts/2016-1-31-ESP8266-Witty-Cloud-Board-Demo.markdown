@@ -7,7 +7,7 @@ author: "Ady"
 ---
 
 <p align="center">
-<img src="https://cloud.githubusercontent.com/assets/744810/12700003/5ac3cf0a-c786-11e5-93c3-5b146e50b894.jpg" alt="Witty Cloud Board" style="width:304px;height:228px;">
+<img src="https://cloud.githubusercontent.com/assets/744810/12700003/5ac3cf0a-c786-11e5-93c3-5b146e50b894.jpg" alt="Witty Cloud Board" style="width:304px;">
 </p>
 
 This is a followup post to last week's [post]({{ site.baseurl }}/blog/post/2016/01/24/ESP8266-Websockets-demo-using-NeoPixels.html) about using websockets to control NeoPixels. I've been slowly teaching myself HTML and JavaScript and in the process I came up with this simple project to demo all the peripherals on this new [Witty Cloud board](http://www.aliexpress.com/item/ESP8266-serial-WIFI-Witty-cloud-Development-Board-ESP-12F-module/32516750994.html). It had a bunch or peripherals like RGB LED, LDR and a user button. The interface is based on this awesome [ESP8266 Analog Broadcast Television Interface](https://github.com/cnlohr/channel3) you might have seen recently. 
