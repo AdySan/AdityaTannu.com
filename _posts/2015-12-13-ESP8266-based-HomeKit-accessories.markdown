@@ -7,11 +7,11 @@ author: "Ady"
 ---
 
 # What is this about?
-
-<p align="center">
+<figure class="video_container">
+<!-- <p align="center"> -->
 <iframe align=“middle” width="420" height="315" src="http://www.youtube.com/embed/tGQj1bp5cOY" frameborder="0" allowfullscreen></iframe>
-</p>
-
+<!-- </p> -->
+</figure>
 This video should give you an idea what we’re trying to achieve here. Of course HomeKit is a lot more powerful than just being able to switch a power outlet. 
 
 # Background
