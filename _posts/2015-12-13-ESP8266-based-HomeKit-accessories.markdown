@@ -22,6 +22,17 @@ Since then I've been tinkering a lot with the [esp8266/Arduino](https://github.c
 
 Involving HomeKit perhaps makes this HelloWorld kind of project a little too complicated. However, once you get it working, it will definitely be fun to explore.
 
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-2765559323648377"
+     data-ad-slot="7813554844"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
 # Topology
 
 Let’s talk about that [video](https://www.youtube.com/watch?v=VJTFwXa_Q0I) a litte. Being completely new to ESP8266, Node, MQTT, etc. I was really cofused about how this stuff was working. Now that I have the same thing working, let me try and explain a little. Here are the components involved:
